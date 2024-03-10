@@ -1,0 +1,2 @@
+1- get all jobs GET /jobs
+2- post jobs  POST /jobs
