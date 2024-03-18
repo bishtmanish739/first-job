@@ -1,15 +1,17 @@
 package com.jopapps.www.First.Job.app.Service.ServiceImpl;
 
-import com.jopapps.www.First.Job.app.DummyObject;
-import com.jopapps.www.First.Job.app.Service.Dto.Job;
+import com.jopapps.www.First.Job.app.Repository.JobRepository;
+import com.jopapps.www.First.Job.app.Entity.Job;
 import com.jopapps.www.First.Job.app.Service.JobService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 @Service
 
 public class JobServiceImpl implements JobService {
+    @Autowired
+    JobRepository jobRepository;
     @Override
     public Job postJob(Job job) {
         return job;
@@ -17,14 +19,14 @@ public class JobServiceImpl implements JobService {
 
     @Override
     public List<Job> findAll() {
-        List<Job> allJobs= new ArrayList<Job>();
-        allJobs.add(DummyObject.job);
+        List<Job> allJobs= jobRepository.findAll();
+
         return allJobs;
     }
 
     @Override
     public Job getJobById(Long id) {
-      return  DummyObject.job;
+      return  null;
 
     }
 

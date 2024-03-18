@@ -1,5 +1,6 @@
-package com.jopapps.www.First.Job.app.Service.Dto;
+package com.jopapps.www.First.Job.app.Entity;
 
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.ZonedDateTime;
@@ -9,11 +10,13 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
 public class Job {
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private  Long id;
     private String jobTitle;
     private  String JobDescription;
-    private  Long companyId;
     private  String companyName;
 
     private Long minExp;
@@ -31,15 +34,8 @@ public class Job {
     private  Long applicants;
     private ZonedDateTime postedDate;
     private  Long jobViews;
+    @ManyToOne
+    private Company company;
 
 
-//    public Job(Long id, String jobTitle, String jobDescription, Long companyId, Long minExp, Long maxExp, List<String> skills) {
-//        this.id = id;
-//        this.jobTitle = jobTitle;
-//        JobDescription = jobDescription;
-//        this.companyId = companyId;
-//        this.minExp = minExp;
-//        this.maxExp = maxExp;
-//        this.skills = skills;
-//    }
 }

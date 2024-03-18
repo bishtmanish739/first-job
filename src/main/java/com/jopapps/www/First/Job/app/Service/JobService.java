@@ -1,6 +1,6 @@
 package com.jopapps.www.First.Job.app.Service;
 
-import com.jopapps.www.First.Job.app.Service.Dto.Job;
+import com.jopapps.www.First.Job.app.Entity.Job;
 
 import java.util.List;
 
