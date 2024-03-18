@@ -25,11 +25,11 @@ public class Profile {
     private ZonedDateTime dob;
     private  String resumeLink;
     private  String profileImage;
-    @OneToMany
+    @ManyToMany(mappedBy = "applicant")
     private List<Job> appliedJob;
-    @OneToMany
+    @ManyToMany (mappedBy = "shortlistedApplicant")
     private  List<Job> shortListedJobs;
-    @OneToMany
+    @OneToMany(mappedBy = "profile")
     private  List<Review> reviews;
 
 }

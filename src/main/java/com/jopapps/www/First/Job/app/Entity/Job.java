@@ -37,5 +37,10 @@ public class Job {
     @ManyToOne
     private Company company;
 
+    @ManyToMany
+    private  List<Profile> applicant;
+    @ManyToMany
+    private  List<Profile> shortlistedApplicant;
+
 
 }

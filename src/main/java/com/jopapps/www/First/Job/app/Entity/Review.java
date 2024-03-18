@@ -19,8 +19,8 @@ public class Review {
     private  double rating;
     private  Long likes;
     private  Long dislikes;
-    @OneToOne
-    private Profile userProfile;
+    @ManyToOne
+    private Profile profile;
     @ManyToOne
     private  Company company;
 
