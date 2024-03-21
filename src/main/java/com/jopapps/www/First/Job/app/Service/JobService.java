@@ -7,6 +7,7 @@ import java.util.List;
 public interface JobService {
     public Job postJob(Job job);
     public List<Job> findAll();
+    public  List<Job> findAllJobByCompanyId(Long id);
     Job getJobById(Long id);
 
     Job deleteJobById(Long id);
