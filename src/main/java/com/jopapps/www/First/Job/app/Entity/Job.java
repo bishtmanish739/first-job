@@ -23,7 +23,8 @@ public class Job {
     private  Long maxExp;
     private  Long minSal;
     private  Long maxSal;
-    private List<String> skills;
+    @ManyToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+    private List<Skill> skills;
     private  List<String> location;
     private  Long noticePeriod;
     private  String qualification;

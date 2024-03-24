@@ -25,4 +25,9 @@ public class Company{
 
     private List<Job> jobs;
 
+    @OneToMany (fetch =FetchType.LAZY,  mappedBy = "company")
+
+    private List<Recruiter> recruiters;
+
+
 }
